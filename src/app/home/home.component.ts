@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TrackService } from '../track.service';
+import { Track } from '../track';
 
 @Component({
   selector: 'app-home',
@@ -12,13 +13,26 @@ export class HomeComponent implements OnInit {
   private errorMsg;
   private wishList;
 
+  private deletedTrack: Track;
+  private updatedTrack: Track = new Track();
+
   constructor(private trackService: TrackService) { }
 
   ngOnInit() {
     this.trackService.getTrackList().subscribe(data => this.wishList = data, error => this.errorMsg = error);
-
     this.trackService.getTopTracks().subscribe(data => this.topTracks = data, error => this.errorMsg = error);
+
   }
 
+  deleteTrack(id) {
+    this.trackService.deleteTrack(id).subscribe(data => this.deletedTrack = data, error => this.errorMsg = error);
+  }
 
+  updateTrack(Tid, name, comment) {
+    this.updatedTrack.id = Tid;
+    this.updatedTrack.name = name;
+    this.updatedTrack.comment = comment;
+    // console.log(this.updatedTrack);
+    this.trackService.updateTrack(0, this.updatedTrack).subscribe(data => this.updatedTrack = data, error => this.errorMsg = error);
+  }
 }

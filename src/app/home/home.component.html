@@ -1,4 +1,17 @@
 <div class="home py-4 px-4">
+
+    <div>
+        <p><input type="text" placeholder="id" #TrackId /></p>
+        <button type="button" (click)="deleteTrack(TrackId.value)">Delete</button>
+    </div>
+
+    <div>
+        <p><input type="text" placeholder="id" #TrackId1 /></p>
+        <p><input type="text" placeholder="name" #TrackName /></p>
+        <p><input type="text" placeholder="comment" #TrackComment /></p>
+        <button type="button" (click)="updateTrack(TrackId1.value, TrackName.value, TrackComment.value)">Update</button>
+    </div>
+    
     <div>
         <h2>Top Tracks</h2>
         <app-carousel *ngIf="topTracks" [isSaved]="false" [tracks]="topTracks.tracks.track"></app-carousel>

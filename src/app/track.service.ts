@@ -38,6 +38,10 @@ export class TrackService {
     return this.httpClient.delete<Track>('http://localhost:8080/api/v1/track/' + id).pipe(catchError(this.errorHandler));
   }
 
+  updateTrack(id: number, track: Track): Observable<Track> {
+    return this.httpClient.put<Track>('http://localhost:8080/api/v1/track/' + id, track).pipe(catchError(this.errorHandler));
+  }
+
   searchTrackByName(trackName: string): Observable<RootObject> {
     this.searchUrl = `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${trackName}&api_key=df9d92a1dc8e4162e4808d2654ed8b62&format=json`;
     return this.httpClient.get<RootObject>(this.searchUrl).pipe(catchError(this.errorHandler));
