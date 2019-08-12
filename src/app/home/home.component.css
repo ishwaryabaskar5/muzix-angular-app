@@ -1,0 +1,32 @@
+.home{
+    padding: 2%;
+}
+
+.arrow-card{
+    color: white;
+}
+
+.search-div{
+    float: right;
+}
+
+.search-icon-button{
+    margin-left: -2.7vw;
+}
+
+.search-bar{
+    border-radius: 3rem;
+    height: 4vh;
+    /* width: 20vw; */
+}
+
+.header-div{
+    width: 100%;
+}
+.logo{
+    width: 60px;
+}
+
+h2{
+    color:white;
+}

@@ -1,0 +1,10 @@
+<div class="home py-4 px-4">
+    <div>
+        <h2>Top Tracks</h2>
+        <app-carousel *ngIf="topTracks" [isSaved]="false" [tracks]="topTracks.tracks.track"></app-carousel>
+    </div>
+    <div>
+        <h2>Wishlist</h2>
+        <app-carousel *ngIf="wishList" [isSaved]="true" [tracks]="wishList"></app-carousel>
+    </div>
+</div>

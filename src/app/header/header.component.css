@@ -1,0 +1,12 @@
+.header{
+    height: 11.5%;
+    /* position: fixed; */
+    
+}
+.header-div{
+    width: 100%;
+}
+
+.logo{
+    width: 60px;
+}

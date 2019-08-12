@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import "./spacing.css";
+
+body{
+    margin: 0%;
+    width: 100vw;
+}
+
+.primary-color{
+    color: #d0346d;
+}
+
+.accent-color{
+    color: #333333;
+}
+
+
+.primary-bg{
+    background-color: #d0346d;
+}
+
+.accent-bg{
+    background-color: #333333;
+}
+

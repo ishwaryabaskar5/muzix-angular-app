@@ -1,0 +1,13 @@
+.search-div{
+    float: right;
+}
+
+.search-icon-button{
+    margin-left: -2.7vw;
+}
+
+.search-bar{
+    border-radius: 3rem;
+    height: 4vh;
+    /* width: 20vw; */
+}

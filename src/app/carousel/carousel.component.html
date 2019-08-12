@@ -1,0 +1,13 @@
+<div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-around center" fxLayoutGap="4rem">
+    <button mat-icon-button class="arrow-card" [disabled]="disablePrevious" (click)="loadPrevious()">
+        <mat-icon [ngStyle]="{'color': !disablePrevious ? 'white' : '#333'}">arrow_back_ios</mat-icon>
+    </button>
+
+    <div fxFlex="12rem" *ngFor="let card of cardCount">
+            <app-card *ngIf="tracks[card+page]" [trackId]="card+page" [track]="tracks[card+page]" [isSaved]="isSaved"></app-card>
+    </div>
+
+    <button mat-icon-button class="arrow-card" [disabled]="disableNext" (click)="loadNext()">
+        <mat-icon [ngStyle]="{'color': !disableNext ? 'white' : '#333'}">arrow_forward_ios</mat-icon>
+    </button>
+</div>

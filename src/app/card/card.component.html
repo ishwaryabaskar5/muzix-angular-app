@@ -1,0 +1,18 @@
+<mat-card class="track-card">
+  <a [routerLink]="['../details']">
+    <img mat-card-image src="assets/song1.webp" [alt]="track.name">
+    <mat-card-content>
+      <p class="track-name">
+        {{track.name}}
+      </p>
+    </mat-card-content>
+  </a>
+  <mat-card-actions>
+    <button mat-icon-button (click)="onClick()">
+      <mat-icon #saveIcon>{{icon}}</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon> share</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>
