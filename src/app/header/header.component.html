@@ -1,10 +1,17 @@
-<mat-toolbar class="header primary-bg">
-    <div class="header-div">
+<mat-toolbar class="header primary-bg ">
+    <div class="header-div ">
         <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-between center">
             <div>
                 <img src="assets/logo1.png" alt="muzix" class="logo" />
             </div>
+            <div class="search">
             <app-search></app-search>
-        </div>
+            </div>
+
+            <mat-nav-list>
+                <a mat-list-item [routerLink]="['/home']" routerLinkActive="router-link-active"> Top Tracks </a>
+                <a mat-list-item [routerLink]="['../wishlist']" routerLinkActive="router-link-active"> WishList </a>
+            </mat-nav-list>
+            </div>
     </div>
 </mat-toolbar>

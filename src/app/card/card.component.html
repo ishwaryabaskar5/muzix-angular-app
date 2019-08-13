@@ -1,8 +1,8 @@
 <mat-card class="track-card">
   <a [routerLink]="['../details']">
-    <img mat-card-image src="assets/song1.webp" [alt]="track.name">
+    <img mat-card-image [src]="imgSrc" [alt]="track.name">
     <mat-card-content>
-      <p class="track-name">
+      <p class="ellipsis">
         {{track.name}}
       </p>
     </mat-card-content>
@@ -14,5 +14,10 @@
     <button mat-icon-button>
       <mat-icon> share</mat-icon>
     </button>
+    <button *ngIf='track.comment' mat-icon-button (click)="openDialog()">
+        <mat-icon> edit</mat-icon>
+      </button>
   </mat-card-actions>
 </mat-card>
+
+<!-- this.artist.image = res.artist.image[2]['#text']; -->

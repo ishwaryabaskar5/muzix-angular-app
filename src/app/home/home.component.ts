@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit {
   constructor(private trackService: TrackService) { }
 
   ngOnInit() {
-    this.trackService.getTrackList().subscribe(data => this.wishList = data, error => this.errorMsg = error);
     this.trackService.getTopTracks().subscribe(data => this.topTracks = data, error => this.errorMsg = error);
 
   }
@@ -32,7 +31,6 @@ export class HomeComponent implements OnInit {
     this.updatedTrack.id = Tid;
     this.updatedTrack.name = name;
     this.updatedTrack.comment = comment;
-    // console.log(this.updatedTrack);
     this.trackService.updateTrack(0, this.updatedTrack).subscribe(data => this.updatedTrack = data, error => this.errorMsg = error);
   }
 }

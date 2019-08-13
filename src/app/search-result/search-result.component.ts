@@ -14,9 +14,9 @@ export class SearchResultComponent implements OnInit {
   private trackName;
   private track;
   constructor(private trackService: TrackService, private activeRoute: ActivatedRoute) {
-    // activeRoute.paramMap.subscribe(val => {
+    activeRoute.paramMap.subscribe(val => {
       this.getSearchResults();
-    // });
+    });
 
    }
 

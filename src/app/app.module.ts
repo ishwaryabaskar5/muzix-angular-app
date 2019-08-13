@@ -22,6 +22,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { TrackDetailsComponent } from './track-details/track-details.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import {MatListModule} from '@angular/material/list';
+import { WishlistComponent } from './wishlist/wishlist.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,9 @@ import { SearchResultComponent } from './search-result/search-result.component';
     HomeComponent,
     TrackDetailsComponent,
     CarouselComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    WishlistComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,8 +54,11 @@ import { SearchResultComponent } from './search-result/search-result.component';
     MatGridListModule,
     FlexLayoutModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatListModule,
+    MatDialogModule
   ],
+  entryComponents: [DialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

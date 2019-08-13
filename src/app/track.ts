@@ -4,3 +4,7 @@ export class Track {
      comment: string;
 
 }
+
+export interface Itrack {
+     track: Track;
+}

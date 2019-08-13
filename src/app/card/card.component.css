@@ -2,6 +2,13 @@ a, a:hover, a:active, a:visited, a:focus{
     color: white;
     text-decoration: none;
 }
-mat-card-content{
-    height: 2.2rem;
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+mat-card{
+    border-radius: 8px;
 }

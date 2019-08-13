@@ -1,5 +1,7 @@
-<div fxLayout="gdArea">
-    <div *ngFor="let i of [0,1,2,3,4]">
+<div class="px-2 py-2">
+<div  fxLayout="row"  fxLayout.lt-md="column" fxLayoutAlign="space-around center" fxLayoutGap="4rem">
+    <div fxFlex="12rem" *ngFor="let i of [0,1,2,3,4]">
         <app-card [track]="searchResult.results.trackmatches.track[i]"></app-card>
     </div>
+</div>
 </div>

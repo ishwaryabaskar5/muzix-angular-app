@@ -1,5 +1,7 @@
 .header{
     height: 11.5%;
+    padding-bottom: 8px;
+    padding-top: 8px;
     /* position: fixed; */
     
 }
@@ -9,4 +11,12 @@
 
 .logo{
     width: 60px;
+}
+
+mat-nav-list{
+    display: flex;
+}
+
+.search{
+   width: 70%;
 }
