@@ -25,7 +25,7 @@ export class CardComponent implements OnInit {
 
   ngOnInit() {
     this.icon = this.isSaved ? 'bookmark' : 'bookmark_border';
-    this.imgSrc = (this.track.image !== undefined) ? this.track.image[0]['#text'] : 'assets/song1.webp';
+    this.imgSrc = (this.track.image !== undefined) ? this.track.image[0]['#text'] : 'assets/song1.jpeg';
 
   }
 
@@ -49,17 +49,21 @@ export class CardComponent implements OnInit {
   }
   removeFromWishList() {
     console.log('remove from function called');
+    if (this.track.id) {
+    this.trackService.deleteTrack(this.track.id).subscribe(data => this.removedTrack = data, error => this.errorMsg = error);
+    window.location.reload();
+  } else {
     this.trackService.deleteTrack(this.trackId).subscribe(data => this.removedTrack = data, error => this.errorMsg = error);
+    }
     this.icon = 'bookmark_border';
     alert('removed from wishist');
 
-    // window.location.reload();
   }
 
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogComponent, {
-      width: '250px',
+      width: '300px',
       data: { track: this.track }
     });
 

@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'wishlist', component: WishlistComponent},
   {path: 'details',   component: TrackDetailsComponent },
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  // {path: '**', component: PageNotFoundComponent}
+  {path: '**', redirectTo: '/home', pathMatch: 'full'}
 
 ];
 

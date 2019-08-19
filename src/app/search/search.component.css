@@ -9,5 +9,6 @@
 .search-bar{
     border-radius: 3rem;
     height: 4vh;
-    /* width: 20vw; */
+    min-width: 20vw;
+    margin-top: 1rem;
 }

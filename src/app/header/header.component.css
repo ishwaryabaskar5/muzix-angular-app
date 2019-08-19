@@ -1,12 +1,12 @@
 .header{
-    height: 11.5%;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    /* position: fixed; */
+    position: fixed;
+    top: 0;
+    z-index: 1030;
     
 }
 .header-div{
     width: 100%;
+
 }
 
 .logo{
@@ -15,8 +15,13 @@
 
 mat-nav-list{
     display: flex;
+    margin-top:1rem;
 }
 
 .search{
-   width: 70%;
+   width: 60%;
+}
+
+.logo-div{
+    padding-top: 2rem;
 }

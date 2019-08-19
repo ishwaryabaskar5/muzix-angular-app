@@ -1,4 +1,24 @@
 .footer{
-    background-color: #e13772;
-    border-radius: 0;
+  background-color: #a31648;
+  border-radius: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+p{
+  font-size: 0.9rem;
+  color: rgb(209, 212, 214);
+}
+
+.social-media-icons{
+  padding-left: 0.8rem;
+  color: rgb(209, 212, 214);
+  height: 2rem;
+
+}
+
+#fb{
+  padding-left: 0;
 }
